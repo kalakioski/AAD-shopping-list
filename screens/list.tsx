@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet,  } from "react-native";
 
-export const HomeScreen = () => {
+export const ListScreen = () => {
 
   return (
     <View style={styles.container}>
@@ -28,11 +28,12 @@ export const HomeScreen = () => {
           <Text style={styles.listText}>Roommates</Text>
       </View>
     </View>
+
   </View>
   )
 };
 
-export default HomeScreen;
+export default ListScreen;
 
 const styles = StyleSheet.create({
 

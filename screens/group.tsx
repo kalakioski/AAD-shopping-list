@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet,  } from "react-native";
 
-export const HomeScreen = () => {
+export const GroupScreen = () => {
 
   return (
     <View style={styles.container}>
@@ -32,7 +32,7 @@ export const HomeScreen = () => {
   )
 };
 
-export default HomeScreen;
+export default GroupScreen;
 
 const styles = StyleSheet.create({
 

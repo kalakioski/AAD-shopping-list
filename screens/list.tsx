@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: 'gray'
   },
   header: {
     flex: 1,
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
   },
   lists: {
     flex: 4.5,
-    backgroundColor: 'blue',
     alignItems: 'center',
     paddingTop: 10
   },
@@ -61,7 +59,6 @@ const styles = StyleSheet.create({
   },
   groups: {
     flex: 4.5,
-    backgroundColor: 'yellow',
     alignItems: 'center',
     paddingTop: 10,
   },

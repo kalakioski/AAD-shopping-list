@@ -10,6 +10,8 @@ import HomeScreen from './home';
 import ListScreen from './list';
 import GroupScreen from './group';
 import ProfileScreen from './profile';
+import LoginScreen from './login';
+import SignUpScreen from './signUp';
 
 const Tab = createBottomTabNavigator();
 

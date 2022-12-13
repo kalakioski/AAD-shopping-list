@@ -1,34 +1,64 @@
 import React from "react";
-import { View, Text, StyleSheet,  } from "react-native";
+import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { AntDesign } from '@expo/vector-icons';
 
 export const ListScreen = () => {
 
   return (
     <View style={styles.container}>
     <View style={styles.lists}>
-      <Text style={styles.headerText}>SHOPPING LISTS</Text>
+      <Text style={styles.headerText}>Groceries</Text>
         <View style={styles.subHeader}>
-          <Text style={styles.subHeaderText}>List</Text>
-          <Text style={styles.subHeaderText}>Created</Text>
-          <Text style={styles.subHeaderText}>Group</Text>
+          <Text style={styles.subHeaderText}>List item</Text>
+          <Text style={styles.subHeaderText}>Amount</Text>
         </View>
         <View style={styles.listItem}>
-          <Text style={styles.listText}>Groceries</Text>
+          <View>
+          <Text style={styles.listText}>Banana</Text>
+          </View>
+          <View style={styles.itemAmount}>
+            <TouchableOpacity>
+              <AntDesign name={'minus'} size={25} color={'white'}/>
+            </TouchableOpacity>
+            <Text style={styles.listText}>2</Text>
+            <TouchableOpacity>
+              <AntDesign name={'plus'} size={25} color={'white'}/>
+            </TouchableOpacity>
+            <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+          </View>
+          </View>
+          
         </View>
         <View style={styles.listItem}>
-          <Text style={styles.listText}>Snacks</Text>
+          <Text style={styles.listText}>Tomato</Text>
+          <View style={styles.itemAmount}>
+          <TouchableOpacity>
+              <AntDesign name={'minus'} size={25} color={'white'}/>
+            </TouchableOpacity>
+            <Text style={styles.listText}>5</Text>
+            <TouchableOpacity>
+              <AntDesign name={'plus'} size={25} color={'white'}/>
+            </TouchableOpacity>
+            <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+          
         </View>
+        <View>
+        <Text style={styles.headerText}>Add new item</Text>
       </View>
-    <View style={styles.groups}>
-      <Text style={styles.headerText}>GROUPS</Text>
-      <View style={styles.listItem}>
-          <Text style={styles.listText}>Family</Text>
+      <View >
+        <TouchableOpacity>
+          <AntDesign name={'plus'} size={30} color={'black'}/>
+        </TouchableOpacity>
+      </View> 
       </View>
-      <View style={styles.listItem}>
-          <Text style={styles.listText}>Roommates</Text>
-      </View>
-    </View>
-
   </View>
   )
 };
@@ -59,8 +89,11 @@ const styles = StyleSheet.create({
   },
   groups: {
     flex: 4.5,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'center',
     paddingTop: 10,
+    backgroundColor: 'pink',
   },
   footer: {
     flex: 1,
@@ -68,7 +101,8 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 24,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingHorizontal: 5
   },
   subHeaderText: {
     fontSize: 20,
@@ -80,11 +114,23 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: '#5e0acc',
     color: 'white',
-    width: '80%',
-    
+    width: '90%',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
+  },
+  itemAmount: {
+    //backgroundColor: 'green',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly', 
+    width: '40%'
   },
   listText: {
     color: 'white',
     fontSize: 20
+  },
+  deleteIcon: {
+    alignItems: 'flex-end',
+    //backgroundColor: 'blue',
+    paddingLeft: 10
   }
 })

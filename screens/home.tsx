@@ -9,7 +9,6 @@ export const HomeScreen = () => {
       <Text style={styles.headerText}>SHOPPING LISTS</Text>
         <View style={styles.subHeader}>
           <Text style={styles.subHeaderText}>List</Text>
-          <Text style={styles.subHeaderText}>Created</Text>
           <Text style={styles.subHeaderText}>Group</Text>
         </View>
         <View style={styles.listItem}>

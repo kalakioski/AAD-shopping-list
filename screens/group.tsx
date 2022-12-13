@@ -1,31 +1,72 @@
 import React from "react";
-import { View, Text, StyleSheet,  } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { AntDesign } from '@expo/vector-icons';
 
 export const GroupScreen = () => {
 
   return (
     <View style={styles.container}>
-    <View style={styles.lists}>
-      <Text style={styles.headerText}>SHOPPING LISTS</Text>
-        <View style={styles.subHeader}>
-          <Text style={styles.subHeaderText}>List</Text>
-          <Text style={styles.subHeaderText}>Created</Text>
-          <Text style={styles.subHeaderText}>Group</Text>
-        </View>
-        <View style={styles.listItem}>
-          <Text style={styles.listText}>Groceries</Text>
-        </View>
-        <View style={styles.listItem}>
-          <Text style={styles.listText}>Snacks</Text>
-        </View>
-      </View>
     <View style={styles.groups}>
-      <Text style={styles.headerText}>GROUPS</Text>
+      {/* First group example */}
+      <View style={styles.groupContainer}>
+        <Text style={styles.headerText}>Family</Text>
+          <View style={styles.listItem}>
+            <Text style={styles.listText}>Matti</Text>
+            <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.listItem}>
+           <Text style={styles.listText}>Maija</Text>
+           <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+        <View style={styles.newMember}>
+        <Text style={styles.headerText}>Add new member</Text>
+        <TouchableOpacity>
+          <AntDesign name={'plus'} size={30} color={'black'}/>
+        </TouchableOpacity>
+      </View>
+      </View>
+      {/* Second group example */}
+      <Text style={styles.headerText}>Friends</Text>
       <View style={styles.listItem}>
-          <Text style={styles.listText}>Family</Text>
+          <Text style={styles.listText}>Late</Text>
+          <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+            </View>
       </View>
       <View style={styles.listItem}>
-          <Text style={styles.listText}>Roommates</Text>
+          <Text style={styles.listText}>Pete</Text>
+          <View style={styles.deleteIcon}>
+              <TouchableOpacity>
+               <AntDesign name={'delete'} size={30} color={'yellow'}/>
+              </TouchableOpacity>
+            </View>
+      </View>
+      <View style={styles.newMember}>
+        <Text style={styles.headerText}>Add new member</Text>
+        <TouchableOpacity>
+          <AntDesign name={'plus'} size={30} color={'black'}/>
+        </TouchableOpacity>
+      </View>
+    <View >
+        
+      </View>
+
+      <View style={styles.newGroup}>
+        <Text style={styles.headerText}>Create a Group</Text>
+        <TouchableOpacity>
+          <AntDesign name={'plus'} size={30} color={'white'}/>
+        </TouchableOpacity>
       </View>
     </View>
   </View>
@@ -61,6 +102,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 10,
   },
+  groupContainer: {
+    paddingVertical: 50,
+    width: '100%',
+    alignItems: 'center'
+  },
   footer: {
     flex: 1,
     backgroundColor: 'cyan'
@@ -80,10 +126,40 @@ const styles = StyleSheet.create({
     backgroundColor: '#5e0acc',
     color: 'white',
     width: '80%',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
+    
+  },
+  newGroup: {
+    margin: 8,
+    padding: 8,
+    borderRadius: 6,
+    backgroundColor: 'green',
+    color: 'white',
+    width: '80%',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
+    
+  },
+
+  newMember: {
+    margin: 8,
+    padding: 8,
+    borderRadius: 6,
+    //backgroundColor: 'gray',
+    color: 'white',
+    width: '80%',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
     
   },
   listText: {
     color: 'white',
     fontSize: 20
+  },
+  deleteIcon: {
+    alignItems: 'flex-end',
+    //backgroundColor: 'blue',
+    paddingLeft: 10
   }
 })

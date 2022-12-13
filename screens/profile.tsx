@@ -6,27 +6,7 @@ export const ProfileScreen = () => {
   return (
     <View style={styles.container}>
     <View style={styles.lists}>
-      <Text style={styles.headerText}>SHOPPING LISTS</Text>
-        <View style={styles.subHeader}>
-          <Text style={styles.subHeaderText}>List</Text>
-          <Text style={styles.subHeaderText}>Created</Text>
-          <Text style={styles.subHeaderText}>Group</Text>
-        </View>
-        <View style={styles.listItem}>
-          <Text style={styles.listText}>Groceries</Text>
-        </View>
-        <View style={styles.listItem}>
-          <Text style={styles.listText}>Snacks</Text>
-        </View>
-      </View>
-    <View style={styles.groups}>
-      <Text style={styles.headerText}>GROUPS</Text>
-      <View style={styles.listItem}>
-          <Text style={styles.listText}>Family</Text>
-      </View>
-      <View style={styles.listItem}>
-          <Text style={styles.listText}>Roommates</Text>
-      </View>
+      <Text style={styles.headerText}>User XYZ</Text>
     </View>
   </View>
   )

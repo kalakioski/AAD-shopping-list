@@ -17,9 +17,13 @@ export default function App () {
   return (
       <Tab.Navigator 
       initialRouteName='HomeScreen'
-      screenOptions={({ route }) => ({
-          tabBarIcon: ({ color, size }) => {
-            let iconName;
+      screenOptions={({ route }: {
+        route: {
+          name: "HomeScreen" | "GroupScreen" | "ListScreen" | "ProfileScreen",
+        }
+      }) => ({
+          tabBarIcon: ({ color, size }: {color: string, size: number}) => {
+            let iconName: "home" | "team" | "shoppingcart" | "user";
 
             if (route.name === 'HomeScreen') {
               iconName = 'home';
@@ -31,7 +35,7 @@ export default function App () {
               iconName = 'user';
             }
             // You can return any component that you like here!
-            return <AntDesign name={iconName} size={size} color={color} />;
+            return <AntDesign name={iconName!} size={size} color={color} />;
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',
